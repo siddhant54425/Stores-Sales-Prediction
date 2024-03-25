@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: salesprediction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: salesprediction
+  template:
+    metadata:
+      labels:
+        app: salesprediction
+    spec:
+      containers:
+      - name: salesprediction-app
+        image: gcr.io/atlantean-talon-162113/salesprediction
+        ports:
+        - containerPort: 8080
+        env:
+          - name: PORT
+            value: "8080"
