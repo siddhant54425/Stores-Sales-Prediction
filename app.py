@@ -69,7 +69,7 @@ def result():
 
     #Lets apply standered scalar
     
-    sc= joblib.load(r'D:\data science\data science project\storesalesprediction-20240314T142050Z-001\storesalesprediction\sc.sav')
+    sc= joblib.load(r'D:\data science\data science project\storesalesprediction\sc.sav')
 
     print(inputs)
 
@@ -78,7 +78,7 @@ def result():
     print(inputs_std)
     #Lets apply prediction
 
-    model= joblib.load(r'D:\data science\data science project\storesalesprediction-20240314T142050Z-001\storesalesprediction\random_forest_grid.sav')
+    model= joblib.load(r'D:/data science/data science project/storesalesprediction/random_forest_grid.sav')
     
     prediction = model.predict(inputs_std)
     print(prediction)    
